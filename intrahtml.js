@@ -638,12 +638,7 @@ function getRenderer(elmDest, objVDOM, hint) {
   intraHTML.blnTiming = false;	// enable to gather performance information about parsing, diffing, and applying dom updates
   intraHTML.blnDebug = false;  	// enable to dump detailed info to the console for debugging 
   intraHTML.blnParser= true; 		// disable if you have specialized HTML markup with namespaces, funky attribs, or invalid nesting. ~10X slower parsing when disabled.
-  
- // publish jQuery plugin: (if applicable)
-  if(pub.jQuery) pub.jQuery.fn.intraHTML=function(strContent){
-     this.each(function jqiht(i,e){ intraHTML(e, strContent);});
-   return this;
-  };
+ 
   
   return intraHTML;
   
